@@ -1,4 +1,4 @@
-package ch.keepcalm.microservice.rr.reactive.rective;
+package ch.keepcalm.microservice.rr.reactive.tweet;
 
 import lombok.*;
 import org.springframework.data.annotation.Id;

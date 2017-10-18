@@ -1,4 +1,4 @@
-package ch.keepcalm.microservice.rr.reactive.rective;
+package ch.keepcalm.microservice.rr.reactive.tweet;
 
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
