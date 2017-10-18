@@ -19,24 +19,26 @@
  */
 package ch.keepcalm.microservice.rr.reactive.web;
 
+import ch.keepcalm.microservice.rr.reactive.tweet.Tweet;
+import ch.keepcalm.microservice.rr.reactive.tweet.TweetRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.thymeleaf.spring5.context.webflux.IReactiveDataDriverContextVariable;
+import org.thymeleaf.spring5.context.webflux.ReactiveDataDriverContextVariable;
+import reactor.core.publisher.Flux;
 
 
 @Controller
 public class SSEController {
 
+    TweetRepository tweetRepository;
 
-
-
-
-    public SSEController() {
-        super();
+    @Autowired
+    public SSEController(TweetRepository tweetRepository) {
+        this.tweetRepository = tweetRepository;
     }
-
-
-
-
 
     @RequestMapping("/")
     public String index() {
@@ -44,19 +46,15 @@ public class SSEController {
     }
 
 
-//    @RequestMapping("/events")
-//    public String events(final Model model) {
-//
-//        final Flux<PlaylistEntry> playlistStream = this.playlistEntryRepository.findLargeCollectionPlaylistEntries();
-//
-//        final IReactiveDataDriverContextVariable dataDriver =
-//                new ReactiveDataDriverContextVariable(playlistStream, 1, 1);
-//
-//        model.addAttribute("data", dataDriver);
-//
-//        return "events";
-//
-//    }
+    @RequestMapping("/events")
+    public String events(final Model model) {
+        final Flux<Tweet> tweetStream = this.tweetRepository.findAll();
+
+        final IReactiveDataDriverContextVariable dataDriver =
+                new ReactiveDataDriverContextVariable(tweetStream, 1, 1);
 
 
+        model.addAttribute("data", dataDriver);
+        return "events";
+    }
 }

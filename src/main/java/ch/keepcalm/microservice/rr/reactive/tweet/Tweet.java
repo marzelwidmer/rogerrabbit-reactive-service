@@ -19,14 +19,14 @@ import java.time.LocalDateTime;
 public class Tweet {
 
     @Id
-    private String id;
+    public String id;
 
     @NotBlank
     @Size(max = 140)
-    private String text;
+    public String text;
 
     @NotNull
-    private LocalDateTime createdAt;
+    public LocalDateTime createdAt;
 //    private LocalDateTime createdAt = LocalDateTime.now();
 
 
