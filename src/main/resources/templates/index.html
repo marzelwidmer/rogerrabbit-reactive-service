@@ -1,34 +1,54 @@
-<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>REACTIVE-SERVICE</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<body>
 
-<html>
+<div class="container">
+  <h2>Spring WebFlux - Thymeleaf Client</h2>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" id="btnId">Open Tweet Stream</button>
+  <!-- Bootstrap Modal -->
+  <div class="modal fade" id="modalId" role="dialog">
+    <div class="modal-dialog">
 
-  <head>
-    <title>Thymeleaf Sandbox: SSE</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  </head>
+      <!-- Bootstrap Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Tweets</h4>
+          </div>
+          <div class="modal-body">
+            <table>
+              <tbody id="dataTable" />
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
 
-  <body>
+<script>
 
-    <h2>Spring WebFlux - Thymeleaf Sandbox application</h2>
+    var dataTable = document.getElementById("dataTable");
+    var source = new EventSource("/stream/tweets");
+    source.addEventListener("message", function(event) {
+        dataTable.innerHTML = event.data + dataTable.innerHTML;
+    });
+</script>
 
-    <table>
-      <tbody id="dataTable">
 
-      </tbody>
-    </table>
+<script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+<script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/js/getrequest.js"></script>
 
-
-    <script>
-
-      var dataTable = document.getElementById("dataTable");
-
-      var source = new EventSource("/stream/tweets");
-      source.addEventListener("message", function(event) {
-         dataTable.innerHTML = event.data + dataTable.innerHTML;
-      });
-
-    </script>
-
-  </body>
-  
+</body>
 </html>
+
+

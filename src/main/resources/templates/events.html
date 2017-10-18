@@ -1,39 +1,35 @@
-<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>REACTIVE-SERVICE</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+</head>
+<body>
 
-<html>
+<div class="container">
+  <h2>Listing being sent as SSE (Server-Sent Events)</h2>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Test</th>
+      <th>Created</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="e : ${data}">
+      <td th:text="${eStat.index}">...</td>
+      <td th:text="${e.id}">...</td>
+      <td th:text="${e.text}">...</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
 
-  <head>
-    <title>Thymeleaf Sandbox</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  </head>
+<script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+<script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <body>
-
-    <p>Listing being sent as SSE (Server-Sent Events)</p>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Row Index</th>
-          <th>Playlist ID</th>
-          <th>Playlist Name</th>
-          <th>Track Name</th>
-          <th>Artist Name</th>
-          <th>Album Title</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr th:each="e : ${data}">
-          <td th:text="${eStat.index}">...</td>
-          <td th:text="${e.playlistId}">...</td>
-          <td th:text="${e.playlistName}">...</td>
-          <td th:text="${e.trackName}">...</td>
-          <td th:text="${e.artistName}">...</td>
-          <td th:text="${e.albumTitle}">...</td>
-        </tr>
-      </tbody>
-    </table>
-
-  </body>
-
+</body>
 </html>
+
