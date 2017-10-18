@@ -1,0 +1,33 @@
+${AnsiColor.BRIGHT_BLUE}
+${AnsiColor.BRIGHT_BLUE}       ${AnsiColor.BRIGHT_BLUE}Application ${spring.application.name} in version ${info.build.version}  ${AnsiStyle.NORMAL}
+${AnsiColor.BRIGHT_BLUE}       ${AnsiColor.BRIGHT_BLUE}Profile   : ${spring.profiles.active}
+${AnsiColor.BRIGHT_BLUE}       ${AnsiColor.BRIGHT_BLUE}Address   : ${server.address}
+${AnsiColor.BRIGHT_BLUE}       ${AnsiColor.BRIGHT_BLUE}Port      : ${server.port}
+${AnsiColor.BRIGHT_BLUE}
+${AnsiColor.BRIGHT_BLUE}       .----------------.  .----------------.  .----------------.  .----------------.  .----------------.
+${AnsiColor.BRIGHT_BLUE}      | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+${AnsiColor.BRIGHT_BLUE}      | |  _______     | || |     ____     | || |    ______    | || |  _________   | || |  _______     | |
+${AnsiColor.BRIGHT_BLUE}      | | |_   __ \    | || |   .'    `.   | || |  .' ___  |   | || | |_   ___  |  | || | |_   __ \    | |
+${AnsiColor.BRIGHT_BLUE}      | |   | |__) |   | || |  /  .--.  \  | || | / .'   \_|   | || |   | |_  \_|  | || |   | |__) |   | |
+${AnsiColor.BRIGHT_BLUE}      | |   |  __ /    | || |  | |    | |  | || | | |    ____  | || |   |  _|  _   | || |   |  __ /    | |
+${AnsiColor.BRIGHT_BLUE}      | |  _| |  \ \_  | || |  \  `--'  /  | || | \ `.___]  _| | || |  _| |___/ |  | || |  _| |  \ \_  | |
+${AnsiColor.BRIGHT_BLUE}      | | |____| |___| | || |   `.____.'   | || |  `._____.'   | || | |_________|  | || | |____| |___| | |
+${AnsiColor.BRIGHT_BLUE}      | |              | || |              | || |              | || |              | || |              | |
+${AnsiColor.BRIGHT_BLUE}      | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+${AnsiColor.BRIGHT_BLUE}       '----------------'  '----------------'  '----------------'  '----------------'  '----------------'
+${AnsiStyle.NORMAL}
+${AnsiStyle.NORMAL}
+${AnsiColor.BRIGHT_BLUE}       .----------------.  .----------------.  .----------------.  .----------------.  .----------------.  .----------------.
+${AnsiColor.BRIGHT_BLUE}      | .--------------. || .--------------. || .--------------. || .--------------. || .--------------. || .--------------. |
+${AnsiColor.BRIGHT_BLUE}      | |  _______     | || |      __      | || |   ______     | || |   ______     | || |     _____    | || |  _________   | |
+${AnsiColor.BRIGHT_BLUE}      | | |_   __ \    | || |     /  \     | || |  |_   _ \    | || |  |_   _ \    | || |    |_   _|   | || | |  _   _  |  | |
+${AnsiColor.BRIGHT_BLUE}      | |   | |__) |   | || |    / /\ \    | || |    | |_) |   | || |    | |_) |   | || |      | |     | || | |_/ | | \_|  | |
+${AnsiColor.BRIGHT_BLUE}      | |   |  __ /    | || |   / ____ \   | || |    |  __'.   | || |    |  __'.   | || |      | |     | || |     | |      | |
+${AnsiColor.BRIGHT_BLUE}      | |  _| |  \ \_  | || | _/ /    \ \_ | || |   _| |__) |  | || |   _| |__) |  | || |     _| |_    | || |    _| |_     | |
+${AnsiColor.BRIGHT_BLUE}      | | |____| |___| | || ||____|  |____|| || |  |_______/   | || |  |_______/   | || |    |_____|   | || |   |_____|    | |
+${AnsiColor.BRIGHT_BLUE}      | |              | || |              | || |              | || |              | || |              | || |              | |
+${AnsiColor.BRIGHT_BLUE}      | '--------------' || '--------------' || '--------------' || '--------------' || '--------------' || '--------------' |
+${AnsiColor.BRIGHT_BLUE}       '----------------'  '----------------'  '----------------'  '----------------'  '----------------'  '----------------'
+${AnsiColor.BRIGHT_BLUE}
+${AnsiColor.BRIGHT_BLUE}
+${AnsiStyle.NORMAL}
