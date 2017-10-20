@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
 
     <name>rogerrabbit-reactive-service</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Spring WebFlux - Reactive Service</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
